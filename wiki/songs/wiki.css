@@ -166,7 +166,7 @@ header {
     font-size: 15px;
     color: #ffd500;
 }
-.accordian {
+.accordion {
     display: flex;
     flex-direction: column;
     width: 137px;
@@ -176,11 +176,11 @@ header {
         0px 0px 2px black,
         0px 0px 2px black;
 }
-.accordian-item-summary {
+.accordion-item-summary {
     padding: 0;
     cursor: pointer;
 }
-.accordian-item-content {
+.accordion-item-content {
     padding: 0px;
 }
 .right-content {

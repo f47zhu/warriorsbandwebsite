@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Warriors Band - Warriorpedia</title>
-        <meta content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="wiki.css" type="text/css" />
         <link rel="icon" href="../../images/wiki/not_transparent.webp" />
         <script src="wiki.js"></script>
@@ -32,10 +32,10 @@
 
         <div class="main-content">
             <aside class="left-sidebar">
-                <div class="accordian">
-                    <details class="accordian-item" open>
-                        <summary class="accordian-item-summary">
-                            <a href="#intro" class="barlink">Introdution </a>
+                <div class="accordion">
+                    <details class="accordion-item" open>
+                        <summary class="accordion-item-summary">
+                            <a href="#intro" class="barlink">Introduction </a>
                         </summary>
                         <ul>
                             <li><a href="#Warriors" class="barlink"> Warriors Band </a></li>
@@ -43,11 +43,11 @@
                         </ul>
                     </details>
 
-                    <details class="accordian-item" open>
-                        <summary class="accordian-item-summary">
+                    <details class="accordion-item" open>
+                        <summary class="accordion-item-summary">
                             <a href="#gen" class="barlink">General Information</a>
                         </summary>
-                        <div class="accordian-item-content">
+                        <div class="accordion-item-content">
                             <ul>
                                 <li><a href="#year" class="barlink"> Year Numbering System </a></li>
                                 <li><a href="#exec" class="barlink"> Brief Executive List </a></li>
@@ -55,11 +55,11 @@
                         </div>
                     </details>
 
-                    <details class="accordian-item" open>
-                        <summary class="accordian-item-summary">
+                    <details class="accordion-item" open>
+                        <summary class="accordion-item-summary">
                             <a href="#culture" class="barlink">Band Culture </a>
                         </summary>
-                        <div class="accordian-item-content">
+                        <div class="accordion-item-content">
                             <ul>
                                 <li><a href="#ed" class="barlink"> Game Etiquette</a></li>
                                 <li><a href="#cheer" class="barlink"> Cheers</a></li>
@@ -73,7 +73,7 @@
             </aside>
 
             <div class="right-content">
-                <h1 id="intro">Introdution</h1>
+                <h1 id="intro">Introduction</h1>
 
                 <h2 id="Warriors">Warriors Band</h2>
                 <p>
@@ -319,7 +319,7 @@
                 <script>
                     let obj = new Date();
                     let day = obj.getDate();
-                    let month = obj.getMonth();
+                    let month = obj.getMonth() + 1;
                     let year = obj.getFullYear();
                     let total = 0;
                     let newyear = year - 1900;
@@ -327,7 +327,7 @@
                     let code;
 
                     if (month < 5) {
-                        ndays = year % 4 == 0 ? [31, 29, 30, 31] : [31, 28, 30, 31];
+                        ndays = (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) ? [31, 29, 31, 30] : [31, 28, 31, 30];
                         code = 1;
                     } else if (month >= 5 && month < 9) {
                         ndays = [31, 30, 31, 31];
@@ -339,7 +339,7 @@
 
                     for (
                         let i = 0;
-                        i < (month < 5 ? month : month >= 5 && month < 9 ? month - 5 : month - 9) + 1;
+                        i < (month < 5 ? month : month >= 5 && month < 9 ? month - 5 : month - 9);
                         i++
                     ) {
                         total += ndays[i];
