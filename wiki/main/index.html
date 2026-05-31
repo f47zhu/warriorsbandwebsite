@@ -388,6 +388,34 @@
                     Modified course code: 1245-124
                 </p>
 
+                <h3>Warriors Band date calculator (revived 1265):</h3>
+                <label for="firstDay">Which day did classes start? (e.g., 7 for May 7th): </label>
+                <input style="width: 50px" type="number" placeholder="7" min="1" max="31" step="1" id="firstDay" oninput="gregToWb(); wbToGreg()" />
+                <div class="dateCalculator">
+                    <div>
+                        <h4>Gregorian date to Warriors Band date:</h4>
+                        <label for="gregDate1">Gregorian date: </label>
+                        <input type="date" id="gregDate1" oninput="gregToWb()" /><br />
+                        Warriors Band date: <span id="wbDate1"></span>
+                        <p style="font-size: small">
+                            Note that this calculator infers your term by your month.<br />
+                            E.g., September 1st → Fall term.
+                        </p>
+                    </div>
+                    <div>
+                        <h4>Warriors Band date to Gregorian date:</h4>
+                        <label for="wbDate2">Warriors Band date: </label>
+                        <input style="width: 50px" type="number" placeholder="1265" step="1" id="wbDateYear" oninput="wbToGreg()"
+                        />- <input
+                        style="width: 50px" type="number" placeholder="75" step="1" min="1" max="123" id="wbDateDay" oninput="wbToGreg()" /><br />
+                        Gregorian date: <span id="gregDate2"></span>
+                        <p style="font-size: small">
+                            Leave the day blank to calculate the term (e.g., Winter 2023).<br />
+                            This calculator supports BCE!
+                        </p>
+                    </div>
+                </div>
+                
                 <h2 id="exec">Brief Executive List</h2>
                 Here is a current list of all currently active executive roles in the Warriors Band. Information on
                 retired roles can be found on the

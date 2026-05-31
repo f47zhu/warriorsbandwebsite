@@ -447,3 +447,10 @@ body {
         opacity: 1;
     }
 }
+
+.dateCalculator {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr);
+    gap: 16px;
+    padding: 16px;
+}
