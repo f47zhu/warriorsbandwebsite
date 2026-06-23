@@ -18,6 +18,9 @@ p {
 h1 {
     margin: 0;
 }
+ul {
+   list-style-position: inside;
+}
 .article a {
     color: #ffd500;
     text-decoration: none;
@@ -184,7 +187,7 @@ header {
     padding: 0px;
 }
 .right-content {
-    flex: 4;
+    flex: 6;
     padding-left: 20px;
     padding-right: 20px;
 }
